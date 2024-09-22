@@ -2,6 +2,7 @@ import { TextInput, KeyboardAvoidingView, View, Image } from "react-native";
 import CustomText from "../custom-text";
 
 type CustomInputProps = {
+  isPassword?: boolean;
   icon?: any;
   label?: string;
   placeholder?: string;
@@ -10,6 +11,7 @@ type CustomInputProps = {
 };
 
 const CustomInput = ({
+  isPassword=false,
   icon,
   label,
   placeholder = "This is Custom Input Text",
@@ -31,8 +33,9 @@ const CustomInput = ({
         {icon && <Image source={icon} className="w-4 h-4" />}
         <TextInput
           placeholder={placeholder}
-          className="placeholder:text-neutral-800"
+          className="placeholder:text-neutral-800 w-full"
           onChangeText={onChangeText}
+          secureTextEntry={isPassword}
         />
       </View>
     </KeyboardAvoidingView>

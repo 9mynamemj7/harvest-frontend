@@ -1,3 +1,7 @@
+// :--- Logo
+import Logo from "../assets/icons/harvest_logo.png";
+// :--- Logo end
+
 // :--- main tab icons
 
 // Crops
@@ -56,6 +60,7 @@ import InfoOutline from "../assets/icons/SystemIcons/tip-outline.png";
 // :--- sns icons
 import Kakao from "../assets/icons/UtilityIcons/kakao.png";
 import Google from "../assets/icons/UtilityIcons/google.png";
+import Apple from "../assets/icons/UtilityIcons/apple.png";
 // :--- sns icons end
 
 // exports all
@@ -90,5 +95,7 @@ export {
   InfoOutline,
   Kakao,
   Google,
+  Apple,
   SearchIcon,
+  Logo,
 };
