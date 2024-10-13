@@ -24,6 +24,8 @@ import ProfileOutlined from "../assets/icons/MainTabIcons/info-outline.png";
 
 // :--- single view icon
 import SearchIcon from "../assets/icons/SingleViewIcons/search-outline.png";
+import AddressOutlined from "../assets/icons/SingleViewIcons/address-outline.png";
+import EmailOutlined from "../assets/icons/SingleViewIcons/email-outline.png";
 
 // :--- single view icon end
 
@@ -44,6 +46,7 @@ import Time from "../assets/icons/UtilityIcons/time.png";
 import TrashCanIcons from "../assets/icons/UtilityIcons/Trash.png";
 import LockAlt from "../assets/icons/UtilityIcons/Lock_alt_light.png";
 import ScreenBack from "../assets/icons/UtilityIcons/screen-back.png";
+import Star from "../assets/icons/UtilityIcons/star.png";
 
 // :--- utility icons end
 
@@ -61,6 +64,8 @@ import InfoOutline from "../assets/icons/SystemIcons/tip-outline.png";
 import Kakao from "../assets/icons/UtilityIcons/kakao.png";
 import Google from "../assets/icons/UtilityIcons/google.png";
 import Apple from "../assets/icons/UtilityIcons/apple.png";
+import Instagram from "../assets/icons/UtilityIcons/instagram.png";
+import Youtube from "../assets/icons/UtilityIcons/youtube.png";
 // :--- sns icons end
 
 // exports all
@@ -96,6 +101,11 @@ export {
   Kakao,
   Google,
   Apple,
+  Instagram,
+  Youtube,
   SearchIcon,
   Logo,
+  AddressOutlined,
+  EmailOutlined,
+  Star,
 };
