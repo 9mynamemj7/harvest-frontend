@@ -39,7 +39,7 @@ module.exports = {
       //   NotoSansKRBold: ["NotoSansKR-Bold", "sans-serif"],
       // },
       fontFamily: {
-        "noto-sans-kr": "Noto Sans KR",
+        "noto-sans-kr": "NotoSansKR-Regular",
         inter: "Inter",
       },
       fontSize: {
