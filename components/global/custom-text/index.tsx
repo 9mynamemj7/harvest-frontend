@@ -45,6 +45,7 @@ type CustomTextProps = {
   size?: TextSize;
   language: "ko" | "en";
   className?: string;
+  numberOfLines?: number;
 };
 
 const CustomText = ({
@@ -53,9 +54,11 @@ const CustomText = ({
   size = "base",
   language,
   className,
+  numberOfLines
 }: CustomTextProps) => {
   return (
     <Text
+      numberOfLines={numberOfLines}
       className={`leading-[120%] tracking-tight ${TextLanguage[language]} ${TypoStyle[size]} ${TextColor[color]} ${className}`}
     >
       {content}

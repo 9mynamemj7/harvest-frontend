@@ -1,4 +1,4 @@
-import { Image, Text, TouchableOpacity } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 type ButtonStyleType = "primary" | "text" | "icon";
 
@@ -13,7 +13,8 @@ const getTextColor = (type: ButtonStyleType) => {
 };
 
 type CustomButtonProps = {
-  title: string;
+  children?: React.ReactNode;
+  title?: string;
   leftIcon?: any;
   rightIcon?: any;
   type?: ButtonStyleType;
@@ -28,6 +29,7 @@ const CustomButton = ({
   onPress,
   type = "primary",
   className,
+  children,
 }: CustomButtonProps) => {
   return (
     <TouchableOpacity
@@ -42,6 +44,7 @@ const CustomButton = ({
         />
       )}
       <Text className={`${getTextColor(type)}`}>{title}</Text>
+      {children}
       {rightIcon && (
         <Image
           source={rightIcon}

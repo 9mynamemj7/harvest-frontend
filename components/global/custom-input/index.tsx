@@ -28,7 +28,7 @@ const CustomInput = ({
         />
       )}
       <View
-        className={`flex flex-row justify-start items-center gap-2 px-3 py-2 border border-brand-200 rounded-s min-w-[358px] ${className}`}
+        className={`flex flex-row justify-start items-center gap-2 px-3 py-2 border border-brand-200 rounded-s min-w-[335px] ${className}`}
       >
         {icon && <Image source={icon} className="w-4 h-4" />}
         <TextInput

@@ -2,6 +2,7 @@ import TanstackProvider from "@/provider/TanstackProvider";
 import "../global.css";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
+import { StatusBar } from "react-native";
 
 import { useEffect } from "react";
 
@@ -18,6 +19,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
+      StatusBar.setBackgroundColor('black')
     }
   }, [loaded]);
 
@@ -30,7 +32,10 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" options={{ title: "Oops!" }} />
+        <Stack.Screen name="(qna)" options={{ headerShown: false }} />
+        <Stack.Screen name="not-found" options={{ title: "Oops!" }} />
+        <Stack.Screen name="server-error" options={{ title: "Oops!" }} />
+        <Stack.Screen name="network-error" options={{ title: "Oops!" }} />
       </Stack>
     </TanstackProvider>
   );

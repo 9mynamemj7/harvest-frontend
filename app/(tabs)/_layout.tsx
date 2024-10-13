@@ -1,14 +1,20 @@
 import { Tabs } from "expo-router";
 import { MainTabLists } from "@/constants";
 import GlobalTabIcon from "@/components/global/tab-icon";
+import { Platform } from "react-native";
 
 const MainTabsLayout = () => {
+  const tabBarHeight = Platform.select({
+    ios: 100,   // iOS 전용 높이
+    android: 70, // Android 전용 높이
+  });
+
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: "#00523E",
+        tabBarActiveTintColor: "#10523E",
       }}
     >
       {MainTabLists.map((tab) => (
@@ -16,9 +22,11 @@ const MainTabsLayout = () => {
           key={tab.title}
           name={tab.name}
           options={{
+            headerShown: false,
             title: tab.title,
             tabBarStyle: {
-              paddingTop: 8,
+              position: 'absolute',
+              height: tabBarHeight,
             },
             tabBarIcon: ({ color, focused }) => (
               <GlobalTabIcon

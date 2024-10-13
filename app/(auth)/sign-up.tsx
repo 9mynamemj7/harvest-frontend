@@ -1,18 +1,20 @@
+import { View } from "react-native";
+
 import CustomText from "@/components/global/custom-text";
-import { router } from "expo-router";
-import { Pressable, SafeAreaView } from "react-native";
+import ScreenbackButton from "@/components/global/custom-button/screenback-button";
+import AuthLayout from "./_components/ui/auth-layout";
+
 
 const SignUpScreen = () => {
-  const handleHomePress = () => {
-    router.back()
-  }
   return (
-    <SafeAreaView className="flex justify-center items-center">
-      <CustomText content="Sign Up Screen" language="en" size="heading-2" />
-      <Pressable onPress={handleHomePress} className="flex flex-row items-center gap-x-3">
-        <CustomText language="ko" content="홈으로" />
-      </Pressable>
-    </SafeAreaView>
+    <AuthLayout>
+      <View className="w-full">
+        <ScreenbackButton />
+      </View>
+      <View className="h-full justify-center">
+        <CustomText content="테스트 계정만을 받고있습니다. Harvest에 문의주세요. ka5560@naver.com" language="en" size="body" />
+      </View>
+    </AuthLayout>
   );
 };
 
